@@ -107,7 +107,7 @@ bool Config::ReadItem(const char * section, const char * key, char * value, size
             break;
 
         const char * tmp_pos = pos + strlen(tmp_key);
-        if ((!isspace(*tmp_pos)) && ('=' != *tmp_pos))
+        if ((!isspace(*tmp_pos)) && ('=' != *tmp_pos))  // will be Infinite loop
             continue;
 
         pos++;
